@@ -66,15 +66,15 @@ void loop(){
   
   if (client.available()) {
     // receiving status from server
-    if(client.find("\"occupied\": ")){
+    if(client.find("\"activated\": ")){
       char state[1];
       client.readBytes(state, 1);
       if(atoi(state) == 1){
-        Serial.println("PING PONG OCCUPIED. Erm I mean, button pressed.");
+        Serial.println("BUTTON PRESSED!");
         digitalWrite(ledPin, HIGH);
       }
       else if(atoi(state) == 0) {
-        Serial.println("PING PONG VACANT.  Erm I mean, button not pressed.");
+        Serial.println("button not pressed.");
         digitalWrite(ledPin, LOW);
       }
     } 
@@ -85,22 +85,18 @@ void loop(){
     }
     
   }
-  
-  
   delay(pause); 
 }
 
 char* generateHttpPut(char* host, char* resource, char occupied){
   char postString[255];
-  sprintf(postString, "PUT %s HTTP/1.1\r\nUser-Agent: %s\r\nHost: %s\r\nContent-Length: 15\r\nContent-Type: application/json\r\n\r\n{\"occupied\": %c}"
+  sprintf(postString, "PUT %s HTTP/1.1\r\nUser-Agent: %s\r\nHost: %s\r\nContent-Length: 16\r\nContent-Type: application/json\r\n\r\n{\"activated\": %c}"
   , resource, USERAGENT, host, occupied);
 
   return postString;
 }
 
 void connectClient(char* http_request){
-
-  
   if (client.connect()) {
     Serial.println("connected");
     Serial.println(http_request);
