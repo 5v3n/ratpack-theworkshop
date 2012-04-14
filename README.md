@@ -8,7 +8,37 @@ To put it short: the Internet of Things is rising and although being a hardware 
 
 ## Episode I - The Workshop
 
-This is the workshop 
+This is the workshop we're having [here](http://www.meetup.com/hacktable/events/57399932/). It goes a little like this:
+
+### 1 - Plain Old Button
+
+Use Sven's lovely advices and [this](https://github.com/5v3n/ratpack-theworkshop/zipball/step-1-plainbutton) information to get a Plain Old Button working. It's basically the Arduino button example code plus a hand crafted Fritzing sketch of the wiring that makes a LED light up when we do so.
+
+### 2 - Plain Old Internet Connection
+
+Use Sven's lovely advices and the Arduino Ethernet or [WiFly](https://github.com/timr/WiFly-Shield) library's 'web client' example to get a Plain Old Internet Connection working.
+
+For Arduino 1.0+ that we are using, mind the updated Wifly library version linked above.
+
+### 3 - Sinatra Takes The Stage
+
+We're close to the magic now. [Sinatra](http://www.sinatrarb.com/) is a Ruby library that lets you negotiate between stuff that is online using the verbs of the internet. In more basic terms its a ruby gem offering a domain specific language that enables you to build RESTful web services on top of the ruby middleware rack.
+
+Our stage is [Heroku](http://heroku.com) which is a hosting service where we may let Sinatra perform for free. That is free as in free beer as long as you don't plan to get drunk since it's going to be awful expensive if you order a second one. Just kidding, I <3 heroku and all my apps were or are bootstrapped there.
+
+[...bla bla writing on process...]
+
+Repo revision with the ready server can be found [here](https://github.com/5v3n/ratpack-theworkshop/zipball/step-2-talktotheworld)
+
+### 4 - Ladies &amp; Gentlemen - The RAT PACK!
+
+Here we'll stick all the learnings from above into one soft- / hardware-jamboree that lets you 
+
+1) push the button (Arduino)
+2) tell the server we did so (Arduino - Sinatra)
+3) let the server to tell all interesed devices that we did so (Ruby)
+4) let all interested devices' LEDs light up. globally. (Arduino)
+5) it's ALIVE!!!! ZOMG!1!!11!! (Hacktable attendees freaking out)
 
 ## Episode II - The Talk
 
