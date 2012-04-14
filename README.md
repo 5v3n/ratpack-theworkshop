@@ -28,7 +28,7 @@ Our stage is [Heroku](http://heroku.com) which is a hosting service where we may
 
 [...bla bla writing on process...]
 
-Repo revision with the ready server can be found [here](https://github.com/5v3n/ratpack-theworkshop/zipball/step-2-talktotheworld)
+Repo revision with the ready server can be found [here](https://github.com/5v3n/ratpack-theworkshop/zipball/step-2-onlinebutton)
 
 ### 4 - Ladies &amp; Gentlemen - The RAT PACK!
 
