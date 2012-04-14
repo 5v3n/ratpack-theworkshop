@@ -12,4 +12,4 @@ This is the workshop
 
 ## Episode II - The Talk
 
-coming soon
+coming soon - feel free to vote for the [Euruko 2012 talk proposal](https://github.com/euruko2012/call-for-proposals/pull/60)!
