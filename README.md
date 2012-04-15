@@ -28,17 +28,17 @@ Our stage is [Heroku](http://heroku.com) which is a hosting service where we may
 
 [...bla bla writing on process...]
 
-Repo revision with the ready server can be found [here](https://github.com/5v3n/ratpack-theworkshop/zipball/step-2-onlinebutton)
+Repo revision with the ready server can be found [here](https://github.com/5v3n/ratpack-theworkshop/zipball/step-2-onlinebutton). It uses one Arduino with a Wifly board. To use it with two independent devices (e.g. one on Hamburg, one in Hong Kong) just build another one, they'll interact just nice. Just connect them to the same ratpack server.
 
 ### 4 - Ladies &amp; Gentlemen - The RAT PACK!
 
-Here we'll stick all the learnings from above into one soft- / hardware-jamboree that lets you 
+Here's a roundup of the workflow we just established. We are able to...
 
-1) push the button (Arduino)
-2) tell the server we did so (Arduino - Sinatra)
-3) let the server to tell all interesed devices that we did so (Ruby)
-4) let all interested devices' LEDs light up. globally. (Arduino)
-5) it's ALIVE!!!! ZOMG!1!!11!! (Hacktable attendees freaking out)
+- push the button (Arduino)
+- tell the server we did so (Arduino - Sinatra)
+- tell the server to tell all interesed devices that we did so (Ruby)
+- let all interested devices' LEDs light up. globally. (Arduino)
+- it's ALIVE!!!! ZOMG!1!!11!! (Hacktable attendees freaking out)
 
 ## Episode II - The Talk
 
