@@ -26,36 +26,33 @@ void setup(){
   pinMode(buttonPin, INPUT);    
   //------------------------ wifly setup ----------------------------------
   Serial.begin(9600);
-  
+  WiFly.setUart(&Serial);
   WiFly.begin();
   
-  if (WiFly.join(ssid, passphrase)) {
-    Serial.println("associted with wifly network.");
-  } 
-  else {
+  if (!WiFly.join(ssid, passphrase)) {
     Serial.println("Association failed.");
     while (1) {
       // Hang on failure.
     }
-  }  
+  }   
 }
 
 void loop(){
   //------------------- button part ---------------------------------------
   if(digitalRead(buttonPin) == LOW){
-    Serial.println("Button NOT pressed.");
+    //Serial.println("Button NOT pressed.");
     //--------- send status to server
     connectClient(generateHttpPut(HOST, RESOURCE, '0'));
-    Serial.println();
-    Serial.println("disconnecting.");
+    //Serial.println();
+    //Serial.println("disconnecting.");
     client.stop();
   }
   else if(digitalRead(buttonPin) == HIGH){
-    Serial.println("Button IS pressed!");
+    //Serial.println("Button IS pressed!");
     //--------- send status to server 
     connectClient(generateHttpPut(HOST, RESOURCE, '1'));
-    Serial.println();
-    Serial.println("disconnecting.");
+    //Serial.println();
+    //Serial.println("disconnecting.");
     client.stop();
   }
   
@@ -70,17 +67,17 @@ void loop(){
       char state[1];
       client.readBytes(state, 1);
       if(atoi(state) == 1){
-        Serial.println("BUTTON PRESSED!");
+        //Serial.println("BUTTON PRESSED!");
         digitalWrite(ledPin, HIGH);
       }
       else if(atoi(state) == 0) {
-        Serial.println("button not pressed.");
+        //Serial.println("button not pressed.");
         digitalWrite(ledPin, LOW);
       }
     } 
     if (!client.connected()) {
-      Serial.println();
-      Serial.println("disconnecting.");
+      //Serial.println();
+      //Serial.println("disconnecting.");
       client.stop();
     }
     
@@ -98,8 +95,8 @@ char* generateHttpPut(char* host, char* resource, char occupied){
 
 void connectClient(char* http_request){
   if (client.connect()) {
-    Serial.println("connected");
-    Serial.println(http_request);
+    //Serial.println("connected");
+    //Serial.println(http_request);
     client.print(http_request);
     client.println();
   } else {
@@ -108,7 +105,7 @@ void connectClient(char* http_request){
   
   Serial.print("Waiting for the response...");
   while(!client.available()){
-    Serial.print('.');
+    //Serial.print('.');
   }
-  Serial.println();
+  //Serial.println();
 }
