@@ -20,6 +20,67 @@ Use Sven's lovely advices and the Arduino Ethernet or [WiFly](https://github.com
 
 For Arduino 1.0+ that we are using, mind the updated Wifly library version linked above.
 
+### 2.5 – setting up your system (wip!)
+
+
+
+
+"Trust me. I know what I'm doing." ––Sledge Hammer
+
+apple dev tools? xcode, check **command line tools!**
+
+[install homebrew](https://github.com/mxcl/homebrew/wiki/installation):
+    
+    $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
+
+
+    $ brew install git
+
+git
+
+
+
+### rvm
+
+    $ curl -L get.rvm.io | bash -s stable
+    
+hook in?
+
+git
+
+heroku
+
+bundler?
+
+
+
+
+---- 
+
+nicht zip, sondern clone
+
+
+    $ mkdir ~/ratpack
+    $ git clone https://github.com/5v3n/ratpack-theworkshop.git ~/ratpack
+    $ cd ~/ratpack
+    
+either .rvmc oder bundle install
+
+
+
+ruby?
+x rvm
+gems
+heroku?
+
+
+    bundle install
+    heroku create
+    git push heroku master
+    
+
+
+
 ### 3 - Sinatra Takes The Stage
 
 We're close to the magic now. [Sinatra](http://www.sinatrarb.com/) is a Ruby library that lets you negotiate between stuff that is online using the verbs of the internet. In more basic terms its a ruby gem offering a domain specific language that enables you to build RESTful web services on top of the ruby middleware rack.
