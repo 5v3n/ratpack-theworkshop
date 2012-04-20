@@ -22,61 +22,43 @@ For Arduino 1.0+ that we are using, mind the updated Wifly library version linke
 
 ### 2.5 – setting up your system (wip!)
 
+> "Trust me. I know what I'm doing." ––Sledge Hammer
+
+Here are the things that need to be installed on your OS X and where you can find them. Please note that order *does* matter. If you have never used a terminal before, don't do this alone :)
 
 
+1. [Apple developer tools](https://developer.apple.com/technologies/tools/). The **command line tools** need to be installed, too: ![](readme-images/xcode-cmt.png)
 
-"Trust me. I know what I'm doing." ––Sledge Hammer
+2. [Rubygems](http://rubygems.org/pages/download). Download the .zip, unpack itm then follow the readme.
 
-apple dev tools? xcode, check **command line tools!**
+3. [Bundler](http://gembundler.com/)
 
-[install homebrew](https://github.com/mxcl/homebrew/wiki/installation):
-    
-    $ /usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
+    $ gem install bundler
 
+4. The [Heroku Toolbelt](https://toolbelt.heroku.com/) (which conviniently includes [git](http://git-scm.com/)) and an [heroku account](https://api.heroku.com/signup).
 
-    $ brew install git
+5. [Homebrew](https://github.com/mxcl/homebrew/wiki/installation)
 
-git
+5. [RVM (Ruby Version Manager)](https://rvm.io/) and a newer ruby (maybe set that while we're at it):
 
-
-
-### rvm
 
     $ curl -L get.rvm.io | bash -s stable
+    $ rvm install 1.9.3
+    $ rvm --default use 1.9.3
     
-hook in?
 
-git
-
-heroku
-
-bundler?
-
-
-
-
----- 
-
-nicht zip, sondern clone
-
+##### clone repo
 
     $ mkdir ~/ratpack
     $ git clone https://github.com/5v3n/ratpack-theworkshop.git ~/ratpack
     $ cd ~/ratpack
-    
-either .rvmc oder bundle install
+    $ bundle install
+
+##### [create a new heroku app](https://devcenter.heroku.com/articles/creating-apps)
 
 
-
-ruby?
-x rvm
-gems
-heroku?
-
-
-    bundle install
-    heroku create
-    git push heroku master
+    heroku create <name> --stack cedar
+s    git push heroku master
     
 
 
