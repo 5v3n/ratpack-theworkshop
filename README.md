@@ -20,6 +20,49 @@ Use Sven's lovely advices and the Arduino Ethernet or [WiFly](https://github.com
 
 For Arduino 1.0+ that we are using, mind the updated Wifly library version linked above.
 
+### 2.5 – setting up your system (wip!)
+
+> "Trust me. I know what I'm doing." ––Sledge Hammer
+
+Here are the things that need to be installed on your OS X and where you can find them. Please note that order *does* matter. If you have never used a terminal before, don't do this alone :)
+
+
+1. [Apple developer tools](https://developer.apple.com/technologies/tools/). The **command line tools** need to be installed, too: ![](https://github.com/5v3n/ratpack-theworkshop/raw/master/readme-images/xcode-cmt.png)
+
+2. [Rubygems](http://rubygems.org/pages/download). Download the .zip, unpack itm then follow the readme.
+
+3. [Bundler](http://gembundler.com/)
+
+    $ gem install bundler
+
+4. The [Heroku Toolbelt](https://toolbelt.heroku.com/) (which conviniently includes [git](http://git-scm.com/)) and an [heroku account](https://api.heroku.com/signup).
+
+5. [Homebrew](https://github.com/mxcl/homebrew/wiki/installation)
+
+5. [RVM (Ruby Version Manager)](https://rvm.io/) and a newer ruby (maybe set that while we're at it):
+
+
+    $ curl -L get.rvm.io | bash -s stable
+    $ rvm install 1.9.3
+    $ rvm --default use 1.9.3
+    
+
+##### clone repo
+
+    $ mkdir ~/ratpack
+    $ git clone https://github.com/5v3n/ratpack-theworkshop.git ~/ratpack
+    $ cd ~/ratpack
+    $ bundle install
+
+##### [create a new heroku app](https://devcenter.heroku.com/articles/creating-apps)
+
+
+    heroku create <name> --stack cedar
+s    git push heroku master
+    
+
+
+
 ### 3 - Sinatra Takes The Stage
 
 We're close to the magic now. [Sinatra](http://www.sinatrarb.com/) is a Ruby library that lets you negotiate between stuff that is online using the verbs of the internet. In more basic terms its a ruby gem offering a domain specific language that enables you to build RESTful web services on top of the ruby middleware rack.
