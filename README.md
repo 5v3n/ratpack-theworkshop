@@ -26,25 +26,28 @@ For Arduino 1.0+ that we are using, mind the updated Wifly library version linke
 
 Here are the things that need to be installed on your OS X and where you can find them. Please note that order *does* matter. If you have never used a terminal before, don't do this alone :)
 
+1. [Apple developer tools](https://developer.apple.com/technologies/tools/). The **command line tools** need to be installed, too:
 
-1. [Apple developer tools](https://developer.apple.com/technologies/tools/). The **command line tools** need to be installed, too: ![](https://github.com/5v3n/ratpack-theworkshop/raw/master/readme-images/xcode-cmt.png)
+    ![](https://github.com/filtercake/ratpack-theworkshop/raw/master/readme-images/xcode-cmt.png)
 
-2. [Rubygems](http://rubygems.org/pages/download). Download the .zip, unpack itm then follow the readme.
+    **update**: there is [a much smaller package, precompiled for 10.6 and 10.7](https://github.com/kennethreitz/osx-gcc-installer/) (found at the [railsgirls install guide](http://guides.railsgirls.com/install))
+
+2. [Rubygems](http://rubygems.org/pages/download). Download the .zip, unpack it, then follow the readme.
 
 3. [Bundler](http://gembundler.com/)
 
-    $ gem install bundler
+        $ gem install bundler
 
-4. The [Heroku Toolbelt](https://toolbelt.heroku.com/) (which conviniently includes [git](http://git-scm.com/)) and an [heroku account](https://api.heroku.com/signup).
+4. An [account at Heroku](https://api.heroku.com/signup) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) (which conviniently includes [git](http://git-scm.com/)).
 
 5. [Homebrew](https://github.com/mxcl/homebrew/wiki/installation)
 
-5. [RVM (Ruby Version Manager)](https://rvm.io/) and a newer ruby (maybe set that while we're at it):
+5. [RVM (Ruby Version Manager)](https://rvm.io/) and a newer ruby (and maybe set that to default while we're at it):
 
 
-    $ curl -L get.rvm.io | bash -s stable
-    $ rvm install 1.9.3
-    $ rvm --default use 1.9.3
+        $ curl -L get.rvm.io | bash -s stable
+        $ rvm install 1.9.3
+        $ rvm --default use 1.9.3
     
 
 ##### clone repo
@@ -54,13 +57,18 @@ Here are the things that need to be installed on your OS X and where you can fin
     $ cd ~/ratpack
     $ bundle install
 
-##### [create a new heroku app](https://devcenter.heroku.com/articles/creating-apps)
+##### [create a new heroku app](https://devcenter.heroku.com/articles/creating-apps) on the cedar stack and push it
 
+your new child, sorry, app needs a name. just make one up. then type:
 
-    heroku create <name> --stack cedar
-s    git push heroku master
+    $ heroku create name_of_your_app --stack cedar
+
+and push it:
+
+    $ git push heroku master
     
 
+if everything went right, you should be able to reach `name_of_your_app.heroku.app` with your browser.
 
 
 ### 3 - Sinatra Takes The Stage
