@@ -26,12 +26,7 @@ For Arduino 1.0+ that we are using, mind the updated Wifly library version linke
 
 Here are the things that need to be installed on your OS X and where you can find them. Please note that order *does* matter. If you have never used a terminal before, don't do this alone :)
 
-
-<<<<<<< HEAD
 1. [Apple developer tools](https://developer.apple.com/technologies/tools/). The **command line tools** need to be installed, too:
-=======
-1. [Apple developer tools](https://developer.apple.com/technologies/tools/). The **command line tools** need to be installed, too: ![](https://github.com/5v3n/ratpack-theworkshop/raw/master/readme-images/xcode-cmt.png)
->>>>>>> upstream/master
 
     ![](readme-images/xcode-cmt.png)
 
