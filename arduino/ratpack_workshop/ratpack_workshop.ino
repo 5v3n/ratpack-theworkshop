@@ -61,7 +61,7 @@ void loop(){
   
   //-------------------- signalling led part -------------------------------------
   char postString[255];
-  sprintf(postString, "GET http://%s%s HTTP/1.1\r\nHost: %s\r\n", HOST, RESOURCE, HOST);
+  sprintf(postString, "GET %s HTTP/1.1\r\nUser-Agent: %s\r\nHost: %s\r\n", RESOURCE, USERAGENT, HOST);
   connectClient(postString);
   
   if (client.available()) {
