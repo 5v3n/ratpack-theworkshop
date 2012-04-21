@@ -28,7 +28,7 @@ Here are the things that need to be installed on your OS X and where you can fin
 
 1. [Apple developer tools](https://developer.apple.com/technologies/tools/). The **command line tools** need to be installed, too:
 
-    ![](readme-images/xcode-cmt.png)
+    ![](https://github.com/filtercake/ratpack-theworkshop/raw/master/readme-images/xcode-cmt.png)
 
     **update**: there is [a much smaller package, precompiled for 10.6 and 10.7](https://github.com/kennethreitz/osx-gcc-installer/) (found at the [railsgirls install guide](http://guides.railsgirls.com/install))
 
