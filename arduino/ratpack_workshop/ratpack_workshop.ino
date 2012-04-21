@@ -30,7 +30,7 @@ void setup(){
   WiFly.begin();
   
   if (WiFly.join(ssid, passphrase)) {
-    Serial.println("associted with wifly network.");
+    Serial.println("Associated with WiFly network.");
   } 
   else {
     Serial.println("Association failed.");
