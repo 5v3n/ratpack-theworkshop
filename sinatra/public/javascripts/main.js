@@ -9,13 +9,13 @@ $(document).ready(function() {
           var button = $('.btn.on');
           button.removeClass('on');
           button.addClass('off');
-          button.html('off')
+          button.html('off');
         }
         else if(data.activated === 1){
           var button = $('.btn.off');
           button.removeClass('off');
           button.addClass('on'); 
-          button.html('on')
+          button.html('on');
         }
       },
       complete: poll,
