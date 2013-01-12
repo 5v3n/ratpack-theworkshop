@@ -15,7 +15,7 @@ $(document).ready(function() {
           var button = $('.btn.off');
           button.removeClass('off');
           button.addClass('on'); 
-          button.html('off')
+          button.html('on')
         }
       },
       complete: poll,
