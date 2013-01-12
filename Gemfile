@@ -6,5 +6,5 @@ gem 'foreman'
 gem 'haml'
 
 group :development  do
-  gem 'heroku'
+  gem 'shotgun'
 end
