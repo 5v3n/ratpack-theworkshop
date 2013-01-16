@@ -6,9 +6,17 @@
   left:0;
 }
 .content {
-    width: 90%;
+    width: 95%;
     margin: 0px auto;
     margin-top: 50px;
+}
+.footer {
+  height: 45px;
+  width: 100%;
+}
+.footer .links {
+  width: 172px;
+  margin: 5px auto 2px auto;
 }
 a.btn {
   display: block; 
