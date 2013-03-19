@@ -2,18 +2,20 @@ require 'sinatra'
 require 'json'
 
 class RatPackServer < Sinatra::Application
-  @@activated=0
+  configure do
+    set :activated, 0
+  end
   get '/' do
-    haml :index, :locals => {:activated => @@activated, :indicator_class => indicator(@@activated)}
+    haml :index, :locals => {:activated => settings.activated, :indicator_class => indicator(settings.activated)}
   end
   get '/status.json' do
-    "{\"activated\": #{@@activated}}"
+    "{\"activated\": #{settings.activated}}"
   end
   put '/status.json' do
     request.body.rewind  # in case someone already read it
     data = JSON.parse request.body.read
-    @@activated = data['activated']
-    "{\"activated\": #{@@activated}}"
+    settings.activated = data['activated']
+    "{\"activated\": #{settings.activated}}"
   end
   def indicator(state)
     if(state == 0)
