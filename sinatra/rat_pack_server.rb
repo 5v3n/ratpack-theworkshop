@@ -15,6 +15,8 @@ class RatPackServer < Sinatra::Application
     request.body.rewind  # in case someone already read it
     data = JSON.parse request.body.read
     settings.activated = data['activated']
+    puts "********** data: #{data}"
+    puts "********** {\"activated\": #{settings.activated}}"
     "{\"activated\": #{settings.activated}}"
   end
   def indicator(state)
